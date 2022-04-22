@@ -435,7 +435,7 @@ svg {
   color: var(--accent-color);
 }
 
-/* call to active and socials */
+/* socials call to active */
 .cta {
   margin-bottom: 20px;
   display: block;
@@ -457,6 +457,8 @@ svg {
 .footer-socials .socials-icon-thumb:focus {
   background-color: var(--accent-color);
 }
+
+/* subscribe call to active */
 
 /* ================== */
 /* END footer of page */
