@@ -513,6 +513,11 @@ svg {
   text-transform: uppercase;
   color: var(--white-primary-color);
 }
+
+.hero .primary {
+  margin-right: auto;
+  margin-left: auto;
+}
 /* END block hero */
 
 /* section features */
@@ -696,13 +701,15 @@ svg {
 
   background-color: rgba(0, 0, 0, 0.2);
   opacity: 1;
+  visibility: visible;
 
-  transition: opacity var(--primary-animation);
+  transition: opacity var(--primary-animation), visibility var(--primary-animation);
 }
 
 .backdrop.is-hidden {
-  pointer-events: none;
   opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .backdrop.is-hidden > .modal {
