@@ -136,6 +136,7 @@ svg {
   padding: 10px 32px;
 
   display: flex;
+  justify-content: center;
   align-items: center;
 
   font-weight: 700;
@@ -365,10 +366,11 @@ svg {
 }
 
 .contacts-nav .link {
-  display: flex;
-  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
+
+  display: flex;
+  align-items: center;
 
   white-space: nowrap;
   color: var(--grey-primary-color);
@@ -415,8 +417,21 @@ svg {
   align-items: center;
 }
 
-.footer .footer-item + .footer-item {
+.footer-item:nth-child(2) {
   margin-left: 70px;
+}
+
+.footer-item:nth-child(3) {
+  margin-left: 93px;
+}
+
+.footer-item > .cta {
+  margin-bottom: 20px;
+  display: block;
+
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-primary-color);
 }
 
 /* logo and address */
@@ -450,15 +465,6 @@ svg {
 }
 
 /* socials call to active */
-.cta {
-  margin-bottom: 20px;
-  display: block;
-
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: var(--white-primary-color);
-}
-
 .footer-socials .socials-icon-thumb {
   background-color: var(--icon-secondary-color);
   color: var(--white-primary-color);
@@ -472,7 +478,32 @@ svg {
   background-color: var(--accent-color);
 }
 
-/* subscribe call to active */
+/* newsletter subscribe form call to active */
+.newsletter-form {
+  width: 570px;
+
+  display: flex;
+  align-items: center;
+}
+
+.newsletter-form > .input {
+  width: 100%;
+  min-height: 50px;
+  margin-right: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 15px 16px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: var(--white-primary-color);
+  background-color: var(--grey-footer-color);
+}
+
+.newsletter-form > .input::placeholder {
+  color: var(--white-primary-opacity-color);
+}
 
 /* ================== */
 /* END footer of page */
@@ -491,7 +522,6 @@ svg {
   padding-top: 200px;
   padding-bottom: 200px;
 
-  text-align: center;
   background-color: var(--grey-footer-color);
   background-image: linear-gradient(var(--hero-background-gradient)), url(../images/bcg-hero.jpg);
   background-size: cover;
@@ -510,6 +540,7 @@ svg {
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--white-primary-color);
 }
@@ -721,7 +752,7 @@ svg {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  min-width: 528px;
+  max-width: 528px;
   min-height: 581px;
   padding: 45px 15px 15px;
 
