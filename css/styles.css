@@ -124,7 +124,6 @@ svg {
   background-color: var(--white-primary-color);
   color: var(--black-primary-color);
   cursor: pointer;
-  outline: none;
 
   transition: background-color var(--primary-animation), color var(--primary-animation),
     box-shadow var(--primary-animation);
@@ -198,7 +197,6 @@ svg {
   color: var(--black-primary-color);
   background-color: var(--white-primary-color);
   cursor: pointer;
-  outline: none;
 
   transition: color var(--primary-animation);
 }
@@ -468,7 +466,6 @@ svg {
 .footer-socials .socials-icon-thumb {
   background-color: var(--icon-secondary-color);
   color: var(--white-primary-color);
-  outline: none;
 
   transition: background-color var(--primary-animation);
 }
@@ -673,7 +670,6 @@ svg {
 /* team socials */
 .team-socials .socials-icon-thumb {
   color: var(--icon-primary-color);
-  outline: none;
 
   transition: background-color var(--primary-animation), color var(--primary-animation);
 }
@@ -706,7 +702,6 @@ svg {
   align-items: center;
 
   color: var(--icon-primary-color);
-  outline: none;
 
   transition: color var(--primary-animation);
 }
@@ -818,7 +813,8 @@ svg {
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--grey-secondary-color);
-  outline: none;
+
+  transition: border-color var(--primary-animation);
 }
 
 .form-field:focus-within .input {
@@ -832,6 +828,7 @@ svg {
 
   fill: var(--grey-secondary-color);
   transform: translateY(-50%);
+  transition: fill var(--primary-animation);
 }
 
 .form-field:focus-within .icon {
@@ -854,7 +851,7 @@ svg {
   align-items: center;
 }
 
-.form-checkbox .checkbox {
+.form-checkbox .check {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -867,7 +864,7 @@ svg {
   overflow: hidden;
 }
 
-.form-checkbox .checkbox-visible {
+.form-checkbox .checkbox {
   width: 16px;
   height: 15px;
   margin-right: 7px;
@@ -879,15 +876,23 @@ svg {
   background-color: var(--white-primary-color);
 }
 
-.checkbox:focus-within .checkbox-visible {
-  box-shadow: 0 0 0 4px var(--accent-color);
+.check + .checkbox {
+  color: transparent;
 }
 
-.checkbox:checked + .checkbox-visible {
+.check:focus + .checkbox {
+  box-shadow: 0 0 0 1px var(--white-primary-color), 0 0 0 3px var(--black-primary-color);
+}
+
+.check:checked + .checkbox {
   border: none;
 
+  color: var(--white-primary-color);
   background-color: var(--accent-color);
-  background-image: url(../images/icons.svg#form-check);
+}
+
+.checkbox-icon {
+  fill: currentColor;
 }
 
 .form-checkbox .form-link {
