@@ -815,10 +815,13 @@ svg {
   color: var(--grey-secondary-color);
 
   transition: border-color var(--primary-animation);
+
+  outline: none;
 }
 
 .form-field:focus-within .input {
   border-color: var(--accent-color);
+  box-shadow: 0 0 0 1px var(--white-primary-color), 0 0 0 3px var(--black-primary-color);
 }
 
 .form-field .icon {
