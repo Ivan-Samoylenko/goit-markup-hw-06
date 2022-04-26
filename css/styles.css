@@ -761,8 +761,8 @@ svg {
 
 /* END modal with backdrop */
 
-/* modal cta */
-.modal .cta {
+/* form call to action */
+.order-form .cta {
   margin-bottom: 30px;
 
   display: block;
@@ -774,7 +774,7 @@ svg {
 
   color: var(--grey-secondary-color);
 }
-/* END modal cta */
+/* END form call to action */
 
 /* modal form */
 .form-field {
